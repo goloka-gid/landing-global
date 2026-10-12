@@ -1,0 +1,160 @@
+.payment-offers-three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.payment-kicker {
+  margin: 0;
+  color: #f1cf7a;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.payment-offer-featured {
+  position: relative;
+  border-color: rgba(241, 207, 122, .65);
+  box-shadow: 0 20px 55px rgba(16, 20, 38, .22);
+  transform: translateY(-8px);
+}
+
+.payment-offer-featured::before {
+  position: absolute;
+  top: -13px;
+  left: 22px;
+  padding: 6px 10px;
+  content: "Оптимальный выбор";
+  color: #2a1f0b;
+  border-radius: 999px;
+  background: #f1cf7a;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+@media (max-width: 980px) {
+  .payment-offers-three {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-offer-featured {
+    transform: none;
+    order: -1;
+  }
+}
+
+button.payment-button {
+  width: 100%;
+  border: 0;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.payment-button-apply {
+  background: linear-gradient(135deg, #168dcc, #42b7d4);
+}
+
+.payment-modal-actions {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.payment-button-telegram,
+.payment-button-contact {
+  width: 100%;
+  margin-top: 0;
+}
+
+.payment-button-telegram {
+  background: linear-gradient(135deg, #168dcc, #42b7d4);
+}
+
+.payment-button-contact {
+  background: linear-gradient(135deg, #34415f, #5a6d91);
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.payment-modal[hidden] {
+  display: none;
+}
+
+.payment-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.payment-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 9, 22, .72);
+  backdrop-filter: blur(8px);
+}
+
+.payment-modal-dialog {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 520px);
+  padding: clamp(28px, 5vw, 44px);
+  color: white;
+  border: 1px solid rgba(241, 207, 122, .42);
+  border-radius: 14px;
+  background: #171c36;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, .35);
+}
+
+.payment-modal-dialog h2 {
+  margin-top: 10px;
+  color: #f1cf7a;
+  font-size: clamp(32px, 5vw, 48px);
+}
+
+.payment-modal-dialog p:not(.eyebrow):not(.payment-kicker) {
+  margin-top: 16px;
+  color: rgba(255, 255, 255, .78);
+}
+
+.payment-modal-selected {
+  color: rgba(255, 255, 255, .92) !important;
+  font-size: 15px;
+}
+
+.payment-modal-selected strong {
+  color: #f1cf7a;
+}
+
+.payment-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, .24);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .08);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.payment-modal-close:hover {
+  background: rgba(255, 255, 255, .16);
+}
+
+.payment-modal-note {
+  display: block;
+  margin-top: 12px;
+  color: rgba(255, 255, 255, .54);
+  text-align: center;
+}

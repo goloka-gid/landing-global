@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Выбор доступа — Магия внутри</title>
+    <meta
+      name="description"
+      content="Выберите доступ к курсу «Магия внутри»: одну неделю, полный маршрут или сопровождение."
+    />
+    <meta name="theme-color" content="#11162f" />
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles-payment.css" />
+  </head>
+  <body class="payment-page">
+    <header class="site-header payment-header">
+      <a class="brand" href="index.html" aria-label="Магия внутри">
+        <span class="brand-mark"></span>
+        <span>Магия внутри</span>
+      </a>
+      <nav class="nav" aria-label="Навигация">
+        <a href="lend2.html">Лендинг</a>
+        <a href="lend2.html#day">1 неделя</a>
+        <a href="lend2.html#pricing">Тарифы</a>
+      </nav>
+      <a class="header-cta" href="lend2.html">Назад</a>
+    </header>
+
+    <main class="payment-shell">
+      <section class="payment-card payment-card-wide" aria-labelledby="payment-title">
+        <p class="eyebrow">Запись на курс</p>
+        <h1 id="payment-title">Выберите доступ</h1>
+        <p class="payment-subtitle">
+          Тариф «Старт» даёт доступ на одну неделю. Можно продлевать участие
+          неделю за неделей или выгоднее купить весь маршрут сразу.
+        </p>
+
+        <div class="payment-offers payment-offers-three">
+          <article id="day1" class="payment-offer">
+            <p class="payment-kicker">Попробовать</p>
+            <h2>Старт</h2>
+            <p class="payment-price">990 руб.</p>
+            <p>
+              Одна неделя курса: урок, две утренние встречи в 7:00 по Москве,
+              общий чат и возможность продолжить следующую неделю за 990 ₽.
+            </p>
+            <div class="payment-actions">
+              <button type="button" class="payment-button payment-button-apply js-open-application-modal" data-plan="Старт" data-price="990 ₽" aria-controls="application-modal">
+                <span>Подать заявку</span>
+                <small>Получить реквизиты и условия</small>
+              </button>
+            </div>
+          </article>
+
+          <article id="full" class="payment-offer payment-offer-featured">
+            <p class="payment-kicker">Полный маршрут</p>
+            <h2>Весь маршрут</h2>
+            <p class="payment-price">6 990 руб.</p>
+            <p>
+              Все 10 недель и 10 артефактов, записи встреч, домашние задания
+              и их проверка. Следующий урок открывается после выполнения текущего.
+            </p>
+            <div class="payment-actions">
+              <button type="button" class="payment-button payment-button-apply js-open-application-modal" data-plan="Весь маршрут" data-price="6 990 ₽" aria-controls="application-modal">
+                <span>Подать заявку</span>
+                <small>Получить реквизиты и условия</small>
+              </button>
+            </div>
+          </article>
+
+          <article id="support" class="payment-offer">
+            <p class="payment-kicker">Личный чат</p>
+            <h2>С сопровождением</h2>
+            <p class="payment-price">9 990 руб.</p>
+            <p>
+              Всё из тарифа «Весь маршрут» плюс личный чат с автором курса,
+              дополнительная встреча и особые медитации вне основного курса.
+              Вопросы можно задавать напрямую и получать личные ответы.
+            </p>
+            <div class="payment-actions">
+              <button type="button" class="payment-button payment-button-apply js-open-application-modal" data-plan="С сопровождением" data-price="9 990 ₽" aria-controls="application-modal">
+                <span>Подать заявку</span>
+                <small>Получить реквизиты и условия</small>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div class="support-block">
+          <p>Нужны реквизиты или хотите оставить заявку?</p>
+          <p>
+            Напишите автору в Telegram:
+            <a href="https://t.me/golokeshvaradas" target="_blank" rel="noopener" class="support-link">
+              @golokeshvaradas
+            </a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <div class="payment-modal" id="application-modal" hidden>
+      <div class="payment-modal-backdrop" data-close-modal></div>
+      <section class="payment-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="application-modal-title">
+        <button type="button" class="payment-modal-close" aria-label="Закрыть" data-close-modal>×</button>
+        <p class="payment-kicker">Ваша заявка</p>
+        <h2 id="application-modal-title">Подать заявку</h2>
+        <p class="payment-modal-selected">Вы выбрали: <strong id="application-modal-plan">тариф</strong> · <strong id="application-modal-price">цена</strong></p>
+        <p>
+          Чтобы получить актуальные реквизиты, напишите автору в личные сообщения. Если удобнее,
+          оставьте свои контакты в форме — автор свяжется с вами.
+        </p>
+        <div class="payment-modal-actions">
+          <a id="application-modal-telegram" class="payment-button payment-button-telegram" href="https://t.me/golokeshvaradas" target="_blank" rel="noopener">
+            Получить реквизиты в Telegram
+          </a>
+          <a id="application-modal-contact" class="payment-button payment-button-contact" href="https://forms.gle/fA3XQTghfwCx5cJq5" target="_blank" rel="noopener">
+            Свяжитесь со мной
+          </a>
+        </div>
+        <small class="payment-modal-note">Telegram — для реквизитов, форма — чтобы оставить контакты.</small>
+      </section>
+    </div>
+
+    <script>
+      (() => {
+        const modal = document.getElementById('application-modal');
+        const plan = document.getElementById('application-modal-plan');
+        const price = document.getElementById('application-modal-price');
+        const telegram = document.getElementById('application-modal-telegram');
+        const contact = document.getElementById('application-modal-contact');
+        const contactFormUrl = 'https://forms.gle/fA3XQTghfwCx5cJq5';
+        const closeButton = modal.querySelector('.payment-modal-close');
+        let lastFocusedElement = null;
+
+        const closeModal = () => {
+          modal.hidden = true;
+          document.body.classList.remove('modal-open');
+          if (lastFocusedElement) lastFocusedElement.focus();
+        };
+
+        document.querySelectorAll('.js-open-application-modal').forEach((button) => {
+          button.addEventListener('click', () => {
+            lastFocusedElement = document.activeElement;
+            plan.textContent = button.dataset.plan;
+            price.textContent = button.dataset.price;
+            const requisitesMessage = `Здравствуйте! Хочу получить реквизиты для тарифа «${button.dataset.plan}» (${button.dataset.price}).`;
+            telegram.href = `https://t.me/golokeshvaradas?text=${encodeURIComponent(requisitesMessage)}`;
+            contact.href = contactFormUrl;
+            modal.hidden = false;
+            document.body.classList.add('modal-open');
+            closeButton.focus();
+          });
+        });
+
+        modal.addEventListener('click', (event) => {
+          if (event.target.matches('[data-close-modal]')) closeModal();
+        });
+
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape' && !modal.hidden) closeModal();
+        });
+      })();
+    </script>
+  </body>
+</html>

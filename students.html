@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Студентам — Магия внутри</title>
+    <meta
+      name="description"
+      content="Актуальное расписание встреч, ссылки и материалы для студентов курса «Магия внутри»."
+    />
+    <meta name="theme-color" content="#11162f" />
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles-students.css" />
+  </head>
+  <body class="students-page">
+    <header class="site-header students-header">
+      <a class="brand" href="lend2.html" aria-label="Магия внутри — на главную">
+        <span class="brand-mark"></span>
+        <span>Магия внутри</span>
+      </a>
+      <nav class="nav" aria-label="Навигация">
+        <a href="lend2.html">Лендинг</a>
+        <a href="payment.html">Тарифы</a>
+        <a href="students.html" aria-current="page">Студентам</a>
+      </nav>
+      <a class="header-cta" href="https://t.me/golokeshvaradas" target="_blank" rel="noopener">Написать автору</a>
+    </header>
+
+    <main>
+      <section class="students-hero">
+        <div class="students-hero-glow" aria-hidden="true"></div>
+        <div class="container students-hero-inner">
+          <div>
+            <p class="eyebrow">Пространство участников</p>
+            <h1>Всё важное —<br />в одном месте</h1>
+            <p class="students-hero-lead">
+              Здесь появляются расписание текущей недели, приглашения на встречи,
+              ссылки и материалы курса.
+            </p>
+            <div class="students-hero-facts" aria-label="Информация о встречах">
+              <span><strong>2</strong> общие встречи</span>
+              <span><strong>7:00</strong> по Москве</span>
+              <span><strong>1</strong> качество недели</span>
+            </div>
+          </div>
+          <aside class="students-welcome-card">
+            <span class="students-card-icon" aria-hidden="true">✦</span>
+            <p class="eyebrow">Перед каждой неделей</p>
+            <h2>Загляните сюда</h2>
+            <p>Все изменения и ссылки будут появляться на этой странице заранее.</p>
+          </aside>
+        </div>
+      </section>
+
+      <!--
+        ===== НАЧАЛО ЕЖЕНЕДЕЛЬНОГО ОБНОВЛЕНИЯ =====
+        Здесь можно менять тему недели, описание, даты, время и ссылки.
+        Чтобы добавить встречу, замените span.meeting-link-placeholder на:
+        <a class="meeting-link meeting-link-live" href="ВАША_ССЫЛКА">Подключиться к встрече →</a>
+      -->
+      <section class="students-section students-week-section" aria-labelledby="week-title">
+        <div class="container">
+          <div class="students-section-heading">
+            <div>
+              <p class="eyebrow eyebrow-dark">Текущая неделя</p>
+              <h2 id="week-title">Настраиваемся на практику</h2>
+            </div>
+          </div>
+
+          <!-- Перед каждой неделей обновите название качества, описание и ссылки ниже. -->
+          <article class="current-week-card" data-content-block="topic">
+            <div class="current-week-number">01</div>
+            <div>
+              <p class="week-kicker">Качество недели</p>
+              <h3 data-sheet="topic-title">Название качества недели</h3>
+              <p data-sheet="topic-description">
+                Здесь появится короткое приглашение к практике: на что обратить внимание,
+                что исследовать в медитации и как заметить это качество в обычной жизни.
+              </p>
+            </div>
+            <div class="week-practice-chip">
+              <span aria-hidden="true">🧘</span>
+              <span><strong>Основная практика</strong><small data-sheet="topic-practice">Название медитации</small></span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="students-section schedule-section" aria-labelledby="schedule-title">
+        <div class="container">
+          <div class="students-section-heading compact-heading">
+            <div>
+              <p class="eyebrow eyebrow-dark">Подключайтесь вовремя</p>
+              <h2 id="schedule-title">Расписание и ссылки</h2>
+            </div>
+            <p class="section-caption">Ссылки публикуются заранее и остаются здесь до конца недели.</p>
+          </div>
+
+          <div class="schedule-grid">
+            <article class="session-card session-card-main" data-schedule-key="monday">
+              <div class="session-topline"><span class="session-day">ПН</span><span class="session-tag">Открытие недели</span></div>
+              <h3 data-sheet="title">Встреча перед началом практики</h3>
+              <p data-sheet="description">Знакомимся с качеством недели, разбираем медитацию, задаём вопросы и практикуем вместе.</p>
+              <div class="session-meta"><strong data-sheet="datetime">Понедельник · 7:00 МСК</strong></div>
+              <span class="meeting-link meeting-link-placeholder" data-sheet-link>Ссылка будет добавлена перед встречей</span>
+            </article>
+
+            <article class="session-card" data-schedule-key="friday">
+              <div class="session-topline"><span class="session-day">ПТ</span><span class="session-tag">Интеграция</span></div>
+              <h3 data-sheet="title">Встреча вопросов и практики</h3>
+              <p data-sheet="description">Обсуждаем опыт недели, разбираем живые ситуации.</p>
+              <div class="session-meta"><strong data-sheet="datetime">Пятница · 7:00 МСК</strong></div>
+              <span class="meeting-link meeting-link-placeholder" data-sheet-link>Ссылка будет добавлена перед встречей</span>
+            </article>
+
+            <article class="session-card session-card-support" data-schedule-key="support">
+              <div class="session-topline"><span class="session-day">✦</span><span class="session-tag">С сопровождением</span></div>
+              <h3 data-sheet="title">Дополнительная встреча</h3>
+              <p data-sheet="description">Отдельная практика и пространство для вопросов участников тарифа «С сопровождением».</p>
+              <div class="session-meta"><strong data-sheet="datetime">Дата и время в личных сообщениях</strong></div>
+              <span class="meeting-link meeting-link-placeholder">Дата, время и ссылка будут в личных сообщениях</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="students-section materials-section" aria-labelledby="materials-title">
+        <div class="container">
+          <div class="students-section-heading compact-heading">
+            <div>
+              <p class="eyebrow eyebrow-dark">Чтобы не потеряться</p>
+              <h2 id="materials-title">Материалы недели</h2>
+            </div>
+          </div>
+          <div class="materials-grid">
+            <article class="material-card" data-material-key="recordings"><span class="material-number">01</span><h3 data-sheet="title">Записи встреч</h3><p data-sheet="description">Записи общих встреч.</p><span class="material-status" data-sheet-link>Будет добавлено</span></article>
+          </div>
+        </div>
+      </section>
+      <!-- ===== КОНЕЦ ЕЖЕНЕДЕЛЬНОГО ОБНОВЛЕНИЯ ===== -->
+
+      <section class="students-section rhythm-section" aria-labelledby="rhythm-title">
+        <div class="container rhythm-layout">
+          <div>
+            <p class="eyebrow">Ваш ритм недели</p>
+            <h2 id="rhythm-title">Не нужно успевать всё сразу</h2>
+            <p>Достаточно возвращаться к практике небольшими шагами и замечать, как новое качество проявляется в вашей жизни.</p>
+          </div>
+          <ol class="rhythm-list">
+            <li><span>01</span><div><strong>До встречи</strong><p>Посмотрите приглашение и подготовьте место, где вам будет спокойно.</p></div></li>
+            <li><span>02</span><div><strong>На неделе</strong><p>Практикуйте медитацию и возвращайтесь к урокам в удобном темпе.</p></div></li>
+            <li><span>03</span><div><strong>После встречи</strong><p>Задайте вопрос, отметьте наблюдения и выберите следующий маленький шаг.</p></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="students-contact">
+        <div class="container students-contact-inner">
+          <div><p class="eyebrow">Остались вопросы?</p><h2>Напишите автору курса</h2><p>Если не нашли нужную ссылку или не уверены, куда идти, напишите в личные сообщения.</p></div>
+          <a class="button button-primary" href="https://t.me/golokeshvaradas" target="_blank" rel="noopener">Написать в Telegram <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer students-footer">
+      <div class="container footer-inner"><span>© Магия внутри</span><a href="lend2.html">&nbsp;Вернуться на страницу курса ↑</a></div>
+    </footer>
+
+    <script>
+      (() => {
+        const sheetId = '1xLrrLvIuOHXLeJ4l-fqJp77txVBdPu3Y20WllVrOgG8';
+        const sheetName = 'Текущая неделя';
+
+        const cellValue = (cell) => {
+          if (!cell) return '';
+          return String(cell.v ?? cell.f ?? '').trim();
+        };
+
+        const loadRows = () => new Promise((resolve, reject) => {
+          const callbackName = `scheduleCallback_${Date.now()}`;
+          const script = document.createElement('script');
+          const timeout = window.setTimeout(() => {
+            cleanup();
+            reject(new Error('Таблица не ответила вовремя'));
+          }, 10000);
+
+          const cleanup = () => {
+            window.clearTimeout(timeout);
+            delete window[callbackName];
+            script.remove();
+          };
+
+          window[callbackName] = (payload) => {
+            cleanup();
+            if (!payload || payload.status !== 'ok') {
+              reject(new Error('Не удалось прочитать таблицу'));
+              return;
+            }
+
+            const rows = payload.table?.rows || [];
+            const headers = (rows.shift()?.c || []).map(cellValue);
+            resolve(rows.map((row) => {
+              const values = row.c || [];
+              return headers.reduce((item, header, index) => {
+                if (header) item[header] = cellValue(values[index]);
+                return item;
+              }, {});
+            }));
+          };
+
+          const params = new URLSearchParams({
+            tqx: `out:json;responseHandler:${callbackName}`,
+            sheet: sheetName,
+          });
+          script.src = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?${params}`;
+          script.onerror = () => {
+            cleanup();
+            reject(new Error('Не удалось подключиться к таблице'));
+          };
+          document.head.appendChild(script);
+        });
+
+        const visibleRows = (rows) => rows.filter((row) => row['Показывать'].toLowerCase() !== 'нет');
+        const findRow = (rows, block, includes = '') => rows.find((row) => {
+          const dateTime = row['Дата и время'] || '';
+          return row['Блок'] === block && dateTime.toLowerCase().includes(includes.toLowerCase());
+        });
+        const setText = (root, selector, value) => {
+          const element = root?.querySelector(selector);
+          if (element && value) element.textContent = value;
+        };
+        const safeUrl = (value) => {
+          try {
+            const url = new URL(value);
+            return url.protocol === 'https:' ? url.href : '';
+          } catch {
+            return '';
+          }
+        };
+        const setLink = (root, value, label) => {
+          const element = root?.querySelector('[data-sheet-link]');
+          const url = safeUrl(value);
+          if (!element || !url) return;
+
+          const link = document.createElement('a');
+          link.className = element.className
+            .replace('meeting-link-placeholder', 'meeting-link-live')
+            .replace('material-status', 'material-link-live');
+          link.href = url;
+          link.target = '_blank';
+          link.rel = 'noopener';
+          link.textContent = label;
+          element.replaceWith(link);
+        };
+        const applySession = (row, selector) => {
+          const card = document.querySelector(selector);
+          if (!row || !card) return;
+          setText(card, '[data-sheet="title"]', row['Заголовок']);
+          setText(card, '[data-sheet="description"]', row['Описание']);
+          setText(card, '[data-sheet="datetime"]', row['Дата и время']);
+          setLink(card, row['Ссылка'], 'Подключиться к встрече →');
+        };
+
+        loadRows().then((rawRows) => {
+          const rows = visibleRows(rawRows);
+          const topic = rows.find((row) => row['Блок'] === 'Тема недели');
+          if (topic) {
+            const topicCard = document.querySelector('[data-content-block="topic"]');
+            setText(topicCard, '[data-sheet="topic-title"]', topic['Заголовок']);
+            setText(topicCard, '[data-sheet="topic-description"]', topic['Описание']);
+            setText(topicCard, '[data-sheet="topic-practice"]', topic['Практика']);
+          }
+
+          applySession(findRow(rows, 'Встреча', 'понедельник'), '[data-schedule-key="monday"]');
+          applySession(findRow(rows, 'Встреча', 'пятница'), '[data-schedule-key="friday"]');
+          applySession(rows.find((row) => row['Блок'] === 'Сопровождение'), '[data-schedule-key="support"]');
+
+          const recordings = rows.find((row) => row['Блок'] === 'Записи');
+          const recordingsCard = document.querySelector('[data-material-key="recordings"]');
+          if (recordings && recordingsCard) {
+            setText(recordingsCard, '[data-sheet="title"]', recordings['Заголовок']);
+            setText(recordingsCard, '[data-sheet="description"]', recordings['Описание']);
+            setLink(recordingsCard, recordings['Ссылка'], 'Открыть записи →');
+          }
+
+        }).catch(() => {
+        });
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,584 @@
+.students-page {
+  background: #f7f5f0;
+}
+
+.students-page .container {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.students-header {
+  background: rgba(17, 22, 48, .94);
+  backdrop-filter: blur(14px);
+}
+
+.students-header .nav a[aria-current="page"] {
+  color: var(--gold);
+  opacity: 1;
+}
+
+.students-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 590px;
+  padding: 150px 0 86px;
+  color: white;
+  background: linear-gradient(135deg, #101a3a 0%, #20274b 58%, #34365d 100%);
+}
+
+.students-hero::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  opacity: .45;
+  background: radial-gradient(circle at 72% 28%, rgba(241, 207, 122, .25), transparent 28%), radial-gradient(circle at 18% 85%, rgba(111, 151, 226, .2), transparent 28%);
+  pointer-events: none;
+}
+
+.students-hero-glow {
+  position: absolute;
+  top: -180px;
+  right: 10%;
+  width: 500px;
+  height: 500px;
+  border: 1px solid rgba(241, 207, 122, .18);
+  border-radius: 50%;
+  box-shadow: 0 0 0 44px rgba(241, 207, 122, .025), 0 0 0 88px rgba(241, 207, 122, .02);
+  transform: rotate(-22deg);
+}
+
+.students-hero-inner,
+.students-contact-inner,
+.rhythm-layout {
+  position: relative;
+  z-index: 1;
+}
+
+.students-hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  align-items: end;
+  gap: 80px;
+}
+
+.students-hero h1 {
+  max-width: 700px;
+  color: white;
+  margin: 14px 0 22px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(56px, 8vw, 104px);
+  font-weight: 500;
+  line-height: .97;
+  letter-spacing: -.055em;
+}
+
+.students-hero-lead {
+  max-width: 620px;
+  color: rgba(255, 255, 255, .76);
+  font-size: 19px;
+}
+
+.students-hero-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-top: 34px;
+  color: rgba(255, 255, 255, .66);
+  font-size: 14px;
+}
+
+.students-hero-facts strong {
+  color: var(--gold);
+}
+
+.students-welcome-card {
+  padding: 28px;
+  border: 1px solid rgba(241, 207, 122, .42);
+  border-radius: 12px;
+  background: rgba(14, 19, 44, .48);
+  box-shadow: var(--shadow);
+}
+
+.students-card-icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 30px;
+  color: #2d2545;
+  border-radius: 50%;
+  background: var(--gold);
+  font-size: 22px;
+}
+
+.students-welcome-card h2,
+.students-contact h2,
+.rhythm-section h2 {
+  margin: 10px 0 12px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.students-welcome-card p:last-child {
+  margin: 0;
+  color: rgba(255, 255, 255, .7);
+}
+
+.students-section {
+  padding: 86px 0;
+}
+
+.students-week-section,
+.materials-section {
+  background: #fffdf9;
+}
+
+.students-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 28px;
+}
+
+.students-section-heading h2 {
+  max-width: 760px;
+  margin: 10px 0 0;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -.035em;
+}
+
+.update-badge,
+.session-tag,
+.material-status {
+  color: #685738;
+  border-radius: 999px;
+  background: #f6e8bf;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.update-badge {
+  padding: 8px 12px;
+  white-space: nowrap;
+}
+
+.current-week-card {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 28px;
+  padding: 30px;
+  border: 1px solid rgba(185, 135, 50, .32);
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fffaf0, #f6f0df);
+}
+
+.current-week-number {
+  color: var(--gold-deep);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 50px;
+  line-height: 1;
+}
+
+.week-kicker {
+  margin: 0 0 8px;
+  color: var(--gold-deep);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.current-week-card h3 {
+  margin: 0;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.current-week-card p:not(.week-kicker) {
+  max-width: 650px;
+  margin: 10px 0 0;
+  color: #706b63;
+}
+
+.week-practice-chip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 190px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 10px 24px rgba(78, 62, 26, .08);
+}
+
+.week-practice-chip > span:first-child {
+  font-size: 24px;
+}
+
+.week-practice-chip strong,
+.week-practice-chip small {
+  display: block;
+}
+
+.week-practice-chip strong {
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.week-practice-chip small {
+  margin-top: 2px;
+  color: #817a70;
+  font-size: 12px;
+}
+
+.schedule-section {
+  background: #f7f5f0;
+}
+
+.compact-heading {
+  align-items: start;
+}
+
+.section-caption {
+  max-width: 330px;
+  margin: 16px 0 0;
+  color: #7a756d;
+  font-size: 14px;
+  text-align: right;
+}
+
+.schedule-grid,
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.session-card,
+.material-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 310px;
+  padding: 26px;
+  border: 1px solid #e8e2d7;
+  border-radius: 12px;
+  background: white;
+}
+
+.session-card-main {
+  border-color: rgba(185, 135, 50, .44);
+  box-shadow: 0 18px 40px rgba(78, 62, 26, .08);
+}
+
+.session-card-support {
+  background: linear-gradient(135deg, #192143, #2d3157);
+  border-color: transparent;
+  color: white;
+}
+
+.session-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.session-day {
+  color: var(--gold-deep);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.session-card-support .session-day,
+.session-card-support h3 {
+  color: var(--gold);
+}
+
+.session-tag {
+  padding: 5px 9px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.session-card h3,
+.material-card h3 {
+  margin: 30px 0 10px;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.08;
+}
+
+.session-card-support h3 {
+  color: white;
+}
+
+.session-card p,
+.material-card p {
+  margin: 0;
+  color: #746f68;
+  font-size: 14px;
+}
+
+.session-card-support p {
+  color: rgba(255, 255, 255, .7);
+}
+
+.session-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  margin-top: auto;
+  padding-top: 24px;
+  color: #777169;
+  font-size: 12px;
+}
+
+.session-card-support .session-meta {
+  color: rgba(255, 255, 255, .65);
+}
+
+.session-meta strong {
+  color: var(--ink);
+}
+
+.session-card-support .session-meta strong {
+  color: white;
+}
+
+.meeting-link {
+  display: block;
+  margin-top: 16px;
+  padding: 13px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.meeting-link-placeholder {
+  color: #8a8378;
+  background: #f3efe7;
+}
+
+.meeting-link-live,
+.material-link-live {
+  color: white;
+  background: linear-gradient(135deg, #168dcc, #42b7d4);
+}
+
+.material-link-live {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 5px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.meeting-link-live:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.session-card-support .meeting-link-placeholder {
+  color: rgba(255, 255, 255, .66);
+  background: rgba(255, 255, 255, .1);
+}
+
+.material-card {
+  min-height: 220px;
+  background: #fffdf9;
+}
+
+.material-number {
+  color: var(--gold-deep);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+.material-card h3 {
+  margin-top: 40px;
+}
+
+.material-status {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 5px 9px;
+  font-size: 11px;
+}
+
+.rhythm-section {
+  color: white;
+  background: radial-gradient(circle at 78% 18%, rgba(241, 207, 122, .16), transparent 24%), linear-gradient(135deg, #111a39, #2f3159);
+}
+
+.rhythm-layout {
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(420px, 1.2fr);
+  align-items: start;
+  gap: clamp(48px, 8vw, 120px);
+}
+
+.rhythm-section h2 {
+  color: white;
+}
+
+.rhythm-section > .container > div > p:last-child {
+  max-width: 500px;
+  color: rgba(255, 255, 255, .7);
+}
+
+.rhythm-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rhythm-list li {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .06);
+}
+
+.rhythm-list li > span {
+  color: var(--gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+}
+
+.rhythm-list strong {
+  font-size: 15px;
+}
+
+.rhythm-list p {
+  margin: 5px 0 0;
+  color: rgba(255, 255, 255, .65);
+  font-size: 13px;
+}
+
+.students-contact {
+  color: white;
+  background: #0f152d;
+}
+
+.students-contact-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding-top: 62px;
+  padding-bottom: 62px;
+}
+
+.students-contact h2 {
+  color: white;
+}
+
+.students-contact p:last-child {
+  max-width: 570px;
+  margin: 0;
+  color: rgba(255, 255, 255, .68);
+}
+
+.students-footer {
+  color: rgba(255, 255, 255, .58);
+  background: #0b1023;
+}
+
+@media (max-width: 980px) {
+  .students-hero-inner,
+  .rhythm-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .students-welcome-card {
+    max-width: 460px;
+  }
+
+  .schedule-grid,
+  .materials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .session-card,
+  .material-card {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 620px) {
+  .students-hero-glow {
+    display: none;
+  }
+
+  .students-page .container {
+    width: min(100% - 32px, 560px);
+  }
+
+  .students-hero {
+    min-height: 0;
+    padding: 116px 0 60px;
+  }
+
+  .students-hero h1 {
+    font-size: clamp(50px, 15vw, 74px);
+  }
+
+  .students-hero-lead {
+    font-size: 17px;
+  }
+
+  .students-section {
+    padding: 58px 0;
+  }
+
+  .students-section-heading,
+  .students-contact-inner {
+    display: block;
+  }
+
+  .update-badge {
+    display: inline-block;
+    margin-top: 16px;
+  }
+
+  .section-caption {
+    margin-top: 14px;
+    text-align: left;
+  }
+
+  .current-week-card {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 22px;
+  }
+
+  .week-practice-chip {
+    min-width: 0;
+  }
+
+  .students-contact .button {
+    display: inline-flex;
+    margin-top: 24px;
+  }
+}
