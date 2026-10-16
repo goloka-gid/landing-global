@@ -15,16 +15,36 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="styles-students.css" />
     <link rel="stylesheet" href="students-tracker.css?v=1" />
+    <!-- Навигация для действующих студентов; стили ограничены этой страницей. -->
+    <style id="students-course-navigation">
+      .students-header .brand,.students-header .header-cta{min-height:44px;display:inline-flex;align-items:center}
+      .students-header .nav a{min-height:44px;display:inline-flex;align-items:center;border-bottom:2px solid transparent}
+      .students-header .nav a[aria-current="page"]{border-bottom-color:var(--gold)}
+      .students-header a:focus-visible{outline:2px solid var(--gold);outline-offset:4px;border-radius:4px}
+      @media(max-width:980px){
+        .students-header{grid-template-columns:minmax(0,1fr) auto;gap:8px 16px}
+        .students-header .brand{grid-column:1;grid-row:1}
+        .students-header .header-cta{grid-column:2;grid-row:1}
+        .students-header .nav{display:flex;grid-column:1 / -1;grid-row:2;justify-content:center;gap:28px;border-top:1px solid rgba(255,255,255,.16);padding-top:4px}
+        .students-hero{padding-top:168px}
+      }
+      @media(max-width:620px){
+        .students-header{column-gap:10px}
+        .students-header .brand{font-size:14px;gap:8px}
+        .students-header .brand-mark{width:16px;height:16px;flex-shrink:0}
+        .students-header .nav{gap:28px;font-size:14px}
+      }
+    </style>
   </head>
   <body class="students-page">
     <header class="site-header students-header">
-      <a class="brand" href="lend2.html" aria-label="Магия внутри — на главную">
+      <a class="brand" href="students.html" aria-label="Магия внутри — страница студентов">
         <span class="brand-mark"></span>
         <span>Магия внутри</span>
       </a>
       <nav class="nav" aria-label="Навигация">
-        <a href="lend2.html">Лендинг</a>
-        <a href="payment.html">Тарифы</a>
+        <a href="https://goloka-gid.github.io/goloka-course/">Курс</a>
+        <a href="https://goloka-gid.github.io/landing-global/tracker/">Трекер</a>
         <a href="students.html" aria-current="page">Студентам</a>
       </nav>
       <a class="header-cta" href="https://t.me/golokeshvaradas" target="_blank" rel="noopener">Написать автору</a>
@@ -183,7 +203,7 @@
     </main>
 
     <footer class="site-footer students-footer">
-      <div class="container footer-inner"><span>© Магия внутри</span><a href="lend2.html">&nbsp;Вернуться на страницу курса ↑</a></div>
+      <div class="container footer-inner"><span>© Магия внутри</span><a href="https://goloka-gid.github.io/goloka-course/">&nbsp;Вернуться на страницу курса ↑</a></div>
     </footer>
 
     <script>
